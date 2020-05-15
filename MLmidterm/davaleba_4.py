@@ -5,11 +5,12 @@ Created on Fri May 15 12:14:35 2020
 @author: cynicos
 """
 
-li2=[]
-strs = ['ab','aba','aaaa','aaaaa']
-for i in strs:
-    li2.append(strs[i].join(sorted(strs[1], reverse = True)))
+str2=""
+inp = str(input("შეიყვანეთ სიტყვები ;-ით გამოყოფილი: "))
+strs = inp.split(";")
+for i, s in enumerate(strs):
+    strs[i]="".join(sorted(strs[i], reverse = True))
+str2 =";".join(strs)
+print(str2)
 
 
-res = ''.join(sorted(strs[1], reverse = True)) 
-print(strs)
